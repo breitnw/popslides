@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Host a Presentation</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body>
+    <div id="start" class="center">
+        <h2><span style = "font-weight:400">Your code is: </span><span id = 'joinCodeStart'></span></h2>
+        <table id = 'userList'></table>
+        <div style = "height:30px"></div>
+        <button id ="startButton" onclick="startPresentation()">Start Presentation</button>
+    </div>
+
+
+    <div id="presentation" style="display: none">
+        <canvas id="pdf-can"></canvas>
+        <div class="controlBar">
+            <div class="left" style="display: inline-block;">
+                <button id="prevButton" onclick = "changePage(-1)"><</button>
+                <button id="nextButton" onclick = "changePage(1)">></button>
+                <button id="startQuizButton" onclick="setState('quiz')" style="display: none; margin-left:20px">Start Quiz</button>
+            </div>
+
+            <div class="right">
+                <p id = "joinCodePresentation"></p>
+                <p id = "currentSlideDisplay"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="quiz" class="center" style="display:none;">
+        <h2>Leaderboard</h2>
+        <table id = 'leaderList'></table>
+        <div style = "height:30px"></div>
+        <button id="stopQuizButton" onclick="setState('presentation')">Stop Quiz</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="host.js"></script>
+
+    </body>
+</html>

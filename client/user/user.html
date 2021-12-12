@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Join a Game</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body>
+    <div id="start" class = center>
+        <h2>Join a Game</h2>
+        <form id="joinup" action="">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" value="Test">
+            <br>
+            <label for="code">Code:</label>
+            <input type="text" name="code" id="code" value="123456">
+            <br>
+            <div style = "height:30px"></div>
+            <input id = submitButton type="submit" value="Join", style="width:200px">
+        </form>
+    </div>
+
+    <div id="wait" class="center" style="display: none">
+        <h1>Wait for start...</h1>
+    </div>
+
+    <div id="presentation" style="display: none">
+        <canvas id="pdf-can"></canvas>
+        <div class="controlBar" style="text-align: right">
+            <div class="right" style="float: none">
+                <p id = "joinCodePresentation"></p>
+                <p id = "currentSlideDisplay"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="quiz"  class="center" style="display: none">
+        <div id = "quizContent">
+            <progress id = "quizProgress" value = "10000" max = "10000"></progress>
+            <h3 id="quizQuestion"></h3>
+            <div id="quizAnswers" class="gridContainer"></div>
+        </div>
+        <h1 style="display: none" id="quizWait">Wait for quiz to end</h1>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="user.js"></script>
+    </body>
+</html>
