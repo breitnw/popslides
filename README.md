@@ -1,5 +1,5 @@
 # Popslides!
-PopSlides! is a creative way to keep students engaged during everyday lectures. Upload slideshows, add competitive and fun quizzes, and monitor students' progress throughout the presentation.
+PopSlides! is a creative way to keep students engaged during everyday lectures. Upload slideshows, add competitive and fun quizzes, and monitor students' progress throughout the presentation. The program is not yet fully functional. 
 
 ## Instructions for Use
 1. Download node.js at https://nodejs.org. Version 16.13.1 or above should work.
