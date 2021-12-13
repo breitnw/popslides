@@ -102,7 +102,7 @@ function changePage(n){
 function showPage(num){
 
     presPdf.getPage(num).then(function(page) {
-        var scale = 1.5;
+        var scale = 1.35;
         var viewport = page.getViewport({ scale: scale, });
 // Support HiDPI-screens.
         var outputScale = window.devicePixelRatio || 1;
